@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html lang="en">
 
 <head>
@@ -15,35 +11,33 @@
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <div id="root">
+        <header>
+            <nav class="nav container">
+                <div class="nav-brand">
+                    <a href="index.html">JB Reaper</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- <script src="" async defer></script> -->
-    <header>
-        <nav class="nav container">
-            <div class="nav-brand">
-                <a href="index.html">Jack B. Mavor </a>
+        <main class="container">
+            <h1>Hello World</h1>
+            <p>I'm hosted with GitHub Pages.</p>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 JB Reaper. All rights reserved.</p>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 JB Reaper. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
