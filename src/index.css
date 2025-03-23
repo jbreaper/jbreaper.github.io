@@ -1,5 +1,8 @@
+/* Import Fira Code font */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 :root {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
     line-height: 1.5;
     font-weight: 400;
     color-scheme: light dark;
@@ -9,6 +12,10 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Enable font ligatures */
+    font-feature-settings: "calt" 1;
+    /* 1 to enable, 0 to disable */
+    font-variant-ligatures: contextual;
 }
 
 a {
@@ -47,7 +54,7 @@ button {
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
     background-color: #000000;
     color: #33ff33;
     cursor: pointer;

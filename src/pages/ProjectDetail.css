@@ -3,7 +3,7 @@
     margin: 2rem auto;
     background-color: #0c0c0c;
     color: #33ff33;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
     border: 1px solid #33ff33;
     box-shadow: 0 0 20px rgba(51, 255, 51, 0.3);
     display: flex;
@@ -114,7 +114,9 @@
     padding: 0.5rem;
     margin: 0.5rem 0;
     border-left: 2px solid #33ff33;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
 }
 
 .terminal-list {
@@ -152,7 +154,7 @@
     border: none;
     outline: none;
     color: #33ff33;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 1rem;
 }
 
@@ -235,7 +237,7 @@
     border: none;
     color: #33ff33;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
     text-transform: uppercase;
 }
@@ -276,13 +278,15 @@
     border: 1px solid #33ff33;
     padding: 0.5rem;
     color: #33ff33;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', monospace;
 }
 
 .os-output {
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
     white-space: pre;
     line-height: 1.4;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
 }
 
 .site-mock {

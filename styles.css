@@ -1,3 +1,7 @@
+/* Import Fira Code font */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 /* Reset default browser styles */
 
 * {
@@ -27,8 +31,11 @@ body {
     --text-color: #00ff00;
     --accent-color: #00ff00;
     /* Typography */
-    --font-family-primary: 'Courier New', monospace;
-    --font-family-secondary: 'Courier New', monospace;
+    --font-family-primary: 'Fira Code', monospace;
+    --font-family-secondary: 'Fira Code', monospace;
+    /* Font Features */
+    --font-feature-settings: "calt" 1;
+    --font-variant-ligatures: contextual;
     /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -54,6 +61,9 @@ body {
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
+    /* Enable font ligatures */
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
 }
 
 
