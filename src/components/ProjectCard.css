@@ -1,0 +1,236 @@
+.project-card {
+    background-color: #0c0c0c;
+    border: 1px solid #33ff33;
+    border-radius: 0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #33ff33;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.2);
+}
+
+.project-card::before {
+    content: "> project_info --details";
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    font-size: 0.8rem;
+    color: #33ff33;
+    background-color: #0c0c0c;
+    padding: 0 0.5rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px dashed #33ff33;
+    padding-bottom: 0.5rem;
+}
+
+.project-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #33ff33;
+}
+
+.project-header h2::before {
+    content: "$ ";
+    color: #33ff33;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: #33ff33;
+    opacity: 0.7;
+}
+
+.project-description {
+    margin: 0.5rem 0 1rem;
+    color: #33ff33;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.project-description::before {
+    content: "# ";
+    color: #33ff33;
+    opacity: 0.7;
+}
+
+.progress-container {
+    margin: 1rem 0;
+}
+
+.progress-label {
+    font-size: 0.85rem;
+    color: #33ff33;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+    height: 1rem;
+    background-color: #0c0c0c;
+    border: 1px solid #33ff33;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #33ff33;
+    opacity: 0.3;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient( 90deg, transparent, transparent 5px, rgba(51, 255, 51, 0.2) 5px, rgba(51, 255, 51, 0.2) 10px);
+}
+
+.project-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #33ff33;
+}
+
+.project-tech {
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    color: #33ff33;
+    opacity: 0.7;
+}
+
+.project-tech::before {
+    content: "/* ";
+}
+
+.project-tech::after {
+    content: " */";
+}
+
+.github-link {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    color: #0c0c0c;
+    background-color: #33ff33;
+    border-radius: 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.github-link:hover {
+    background-color: #0c0c0c;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+}
+
+
+/* Blinking cursor effect */
+
+.project-card:hover::after {
+    content: "_";
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #33ff33;
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Light mode styles still included but modified for terminal theme */
+
+@media (prefers-color-scheme: light) {
+    .project-card {
+        background-color: #0a0a0a;
+        border-color: #00cc00;
+        color: #00cc00;
+        box-shadow: 0 0 10px rgba(0, 204, 0, 0.15);
+    }
+    .project-card::before {
+        color: #00cc00;
+        background-color: #0a0a0a;
+    }
+    .project-header {
+        border-bottom-color: #00cc00;
+    }
+    .project-header h2,
+    .project-date,
+    .project-description,
+    .progress-label,
+    .project-tech {
+        color: #00cc00;
+    }
+    .progress-bar {
+        border-color: #00cc00;
+    }
+    .progress-fill {
+        background-color: #00cc00;
+    }
+    .github-link {
+        background-color: #00cc00;
+        color: #0a0a0a;
+    }
+    .github-link:hover {
+        background-color: #0a0a0a;
+        color: #00cc00;
+        border-color: #00cc00;
+    }
+    .project-card:hover::after {
+        color: #00cc00;
+    }
+}
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.view-details {
+    font-size: 0.85rem;
+    color: #33ff33;
+    border: 1px dashed #33ff33;
+    padding: 0.4rem 0.8rem;
+    position: relative;
+}
+
+.view-details::before {
+    content: "$ cat";
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.view-details::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+}
+
+@media (prefers-color-scheme: light) {
+    .view-details {
+        color: #00cc00;
+        border-color: #00cc00;
+    }
+}

@@ -402,10 +402,11 @@ select {
 /* Card component */
 
 .card {
-    background: white;
+    background: black;
+    border: 2px solid var(--primary-color);
     border-radius: var(--border-radius-md);
     padding: var(--spacing-md);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px var(--primary-color);
 }
 
 
